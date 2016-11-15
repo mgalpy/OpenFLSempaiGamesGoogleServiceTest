@@ -109,7 +109,7 @@ script:
   - cd $HOME
   - curl --remote-name http://arcademechanics.com/download/pubgame/.hxcpp_config.xml
   - head -100 $HOME/.hxcpp_config.xml
-  - cd ${HOME}/build/mgalpy/OpenFLGoogleServiceTest
+  - cd ${HOME}/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest
   - pwd
   - ls
   # - haxelib run lime setup android;
@@ -147,7 +147,7 @@ before_deploy:
   # mac - mac64; ios - ios; linux - linux64
   - ls
   - pwd
-  - cd ${HOME}/build/mgalpy/OpenFLGoogleServiceTest
+  - cd ${HOME}/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest
   - ls
   - cd bin
   - ls
@@ -162,9 +162,9 @@ before_deploy:
   - ls
   - pwd
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-      export deployFile="${HOME}/build/mgalpy/OpenFLGoogleServiceTest/bin/android/release/*.zip";
+      export deployFile="${HOME}/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest/bin/android/release/*.zip";
     elif [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-      export deployFile="/Users/travis/build/mgalpy/OpenFLGoogleServiceTest/bin/ios/cpp/*.zip";
+      export deployFile="/Users/travis/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest/bin/ios/cpp/*.zip";
     fi
 
 deploy:
