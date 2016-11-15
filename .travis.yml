@@ -136,8 +136,6 @@ script:
   - ls
   - cd bin
   - ls
-  - cd app
-  - ls
   - curl -T OpenFLHelloWorld-debug.apk -u ${ftp_user}:${ftp_password} ftp://arcademechanics.com/download/pubgame/
 
 after_success:
@@ -153,16 +151,8 @@ before_deploy:
   - ls
   - cd android
   - ls
-  - cd bin
-  - ls
-  - cd bin
-  - ls
-  # - cd ${HOME}/build/mgalpy/PubGame/export/linux64/cpp;
-  # - cd ${HOME}/build/mgalpy/PubGame/export/ios/cpp;
-  - ls
-  - pwd
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-      export deployFile="${HOME}/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest/bin/android/release/*.zip";
+      export deployFile="${HOME}/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest/bin/android/*.zip";
     elif [ "${TRAVIS_OS_NAME}" = "osx" ]; then
       export deployFile="/Users/travis/build/mgalpy/OpenFLSempaiGamesGoogleServiceTest/bin/ios/cpp/*.zip";
     fi
