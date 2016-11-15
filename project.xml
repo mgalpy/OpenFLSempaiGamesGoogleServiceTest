@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	<app title="OpenFLHelloWorld - Build"  package="com.MyExample.OpenFLHelloWorld" file="OpenFLHelloWorld" main="Main" version="0.0.1" company="OpenFLHelloWorld"/>
+	<app if="mobile" title="OpenFLHelloWorld" file="OpenFLHelloWorld" main="Main" version="0.0.1" company="OpenFLHelloWorld"/>
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="OpenFLHelloWorld" package="com.MyExample.OpenFLHelloWorld" version="1.0.0" company="mg" />
+	
+		
+	<!--These window settings apply to all targets-->
+    <window width="478" height="850" fps="60" background="#000000" hardware="true" vsync="true"/>
+
+    <!--HTML5-specific-->
+    <window if="html5" resizable="false"/>
+
+    <!--Desktop-specific-->
+    <window if="desktop" orientation="landscape" fullscreen="false" resizable="true"/>
+
+    <window if="windows" antialiasing="4" use-shaders="true" width="1720" height="850"/>
+    <window if="cpp debug" antialiasing="0"/>
+    <!--Mobile-specific-->
+    <window if="mobile" orientation="portrait" antialiasing="0" fullscreen="true" width="0" height="0"/>
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<!--<haxelib name="actuate" />-->
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+	<haxelib name="extension-googleplaygames" />
+	<setenv name="GOOGLE_PLAY_GAMES_ID" value="	123456789123" />
+	<android target-sdk-version="23" if="android" />
+</project>
