@@ -92,9 +92,9 @@ install:
   # - haxelib install flixel-tools 1.1.3 > log.txt 2>&1
   # - haxelib install flixel-addons 2.1.0 > log.txt 2>&1
   # - haxelib install nape > log.txt 2>&1 
-  - haxelib list 
   - haxelib install lime-tools > log.txt 2>&1
   - haxelib install extension-googleplaygames > log.txt 2>&1
+  - haxelib list 
   # - yes | haxelib run lime setup --quiet
 
 before_script:
